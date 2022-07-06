@@ -15,7 +15,7 @@ body{
         margin: 0;
     }
     h3{
-      &:hover{
+      &:hover,:active{
         cursor: pointer;
         color: #aaa;
       }  
@@ -99,6 +99,10 @@ body{
         border-radius: 12%;
         display: flex;
         flex-direction: column;
+        &:hover,:active{
+            cursor: pointer;
+            filter: brightness(1.1);
+        }
         .day-text{
             margin: 0.3rem 0 0 0.3rem;
             font-size: 1rem;
@@ -161,9 +165,6 @@ body{
             background-color: rgb(188, 138, 138);
         }
     }
-    
-    
-
 }
 
 #modal-background{
