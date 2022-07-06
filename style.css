@@ -14,7 +14,7 @@ body {
 #header h2, #header h3 {
   margin: 0;
 }
-#header h3:hover, #header h3 :active {
+#header h3:hover {
   cursor: pointer;
   color: #aaa;
 }
@@ -126,24 +126,24 @@ body {
   filter: brightness(1.1);
 }
 #calendar .calendar-day .day-text {
-  margin: 0.3rem 0 0 0.3rem;
+  margin: 0.3rem 0 0 0.5rem;
   font-size: 1rem;
 }
 @media screen and (max-width: 800px) {
   #calendar .calendar-day .day-text {
-    margin: 0.2 0 0 0.2rem;
+    margin: 0.3rem 0 0 0.5rem;
     font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 640px) {
   #calendar .calendar-day .day-text {
-    margin: 0 0 0 0.2rem;
+    margin: 0.1rem 0 0 0.5rem;
     font-size: 0.6rem;
   }
 }
 @media screen and (max-width: 520px) {
   #calendar .calendar-day .day-text {
-    margin: 0 0 0 0.2rem;
+    margin: 0.1rem 0 0 0.4rem;
     font-size: 0.4rem;
   }
 }

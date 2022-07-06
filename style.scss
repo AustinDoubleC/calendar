@@ -15,7 +15,7 @@ body{
         margin: 0;
     }
     h3{
-      &:hover,:active{
+      &:hover{
         cursor: pointer;
         color: #aaa;
       }  
@@ -104,18 +104,18 @@ body{
             filter: brightness(1.1);
         }
         .day-text{
-            margin: 0.3rem 0 0 0.3rem;
+            margin: 0.3rem 0 0 0.5rem;
             font-size: 1rem;
             @media screen and (max-width:800px){
-                margin: 0.2 0 0 0.2rem;
+                margin: 0.3rem 0 0 0.5rem;
                 font-size: 0.8rem;
             }
             @media screen and (max-width:640px){
-                margin: 00 0 0 0.2rem;
+                margin: 0.1rem 0 0 0.5rem;
                 font-size: 0.6rem;
             }
             @media screen and (max-width:520px){
-                margin: 0 0 0 0.2rem;
+                margin: 0.1rem 0 0 0.4rem;
                 font-size: 0.4rem;
             }
 
