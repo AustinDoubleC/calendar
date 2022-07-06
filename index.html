@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet"/>
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <h3 id="back"><< Back</h3>
+        <h2 id="month-title"></h2>
+        <h3 id="next">Next >></h3>
+    </div>
+    <div id="weekdays-container">
+        <div class="weekday sun">Sun</div>
+        <div class="weekday">Mon</div>
+        <div class="weekday">Tue</div>
+        <div class="weekday">Wed</div>
+        <div class="weekday">Thur</div>
+        <div class="weekday">Fri</div>
+        <div class="weekday">Sat</div>
+    </div>
+    <div id="modal-background">
+        <div id="modal-container">
+            <h3 id="event-title"></h3>
+            <input type="text" id="event-input"/>
+            <div id="button-container">
+                <button class="modal-button" id="btn-add">Add event</button>
+                <button class="modal-button" id="btn-update">Update</button>
+                <button class="modal-button" id="btn-delete">Delete</button>
+                <button class="modal-button" id="btn-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div id="calendar"></div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

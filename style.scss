@@ -1,0 +1,222 @@
+body{
+ margin: 0;   
+ font-family: 'Righteous', cursive;
+ color: #555;
+
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 500px;
+    margin: 1rem auto;
+    h2,h3{
+        margin: 0;
+    }
+    h3{
+      &:hover{
+        cursor: pointer;
+        color: #aaa;
+      }  
+    }
+    @media screen and (max-width:640px){
+        width: 380px;
+        h3{
+            font-size: 1rem;
+        }
+    }
+    @media screen and (max-width:520px){
+        width: 320px;
+    }
+}
+
+#weekdays-container{
+    display:flex;
+    width: 750px;
+    max-width: 750px;
+    margin: 0 auto;
+    @media screen and (max-width:800px){
+        width: 600px;
+    max-width: 600px;
+    }
+    @media screen and (max-width:640px){
+        width: 500px;
+    max-width: 500px;
+    }
+    @media screen and (max-width:520px){
+        width: 400px;
+    max-width: 400px;
+    }
+    .weekday{
+        width:100px;
+        height: 2rem;
+        margin:0.1rem;
+        padding-top: 0.5rem;
+        font-size: 1.2rem;
+        text-align: center;
+        &.sun{
+            color: rgb(255, 73, 73);
+        }
+        @media screen and (max-width:800px){
+            width:80px;
+            height: 80px;
+        }
+        @media screen and (max-width:640px){
+            width:67px;
+            height: 67px;
+        }
+        @media screen and (max-width:520px){
+            width:  53px;
+            height: 53px;
+        }
+    }
+}
+#calendar{
+    display: flex;
+    flex-wrap: wrap;
+    width: 750px;
+    max-width: 750px;
+    margin: 0 auto;
+    @media screen and (max-width:800px){
+        width: 600px;
+    max-width: 600px;
+    }
+    @media screen and (max-width:640px){
+        width: 500px;
+    max-width: 500px;
+    }
+    @media screen and (max-width:520px){
+        width: 400px;
+    max-width: 400px;
+    }
+    .calendar-day{
+        width: 100px;
+        height: 100px;
+        background-color: rgb(213, 242, 242);
+        margin:0.1rem;
+        overflow: auto;
+        border-radius: 12%;
+        display: flex;
+        flex-direction: column;
+        .day-text{
+            margin: 0.3rem 0 0 0.3rem;
+            font-size: 1rem;
+            @media screen and (max-width:800px){
+                margin: 0.2 0 0 0.2rem;
+                font-size: 0.8rem;
+            }
+            @media screen and (max-width:640px){
+                margin: 00 0 0 0.2rem;
+                font-size: 0.6rem;
+            }
+            @media screen and (max-width:520px){
+                margin: 0 0 0 0.2rem;
+                font-size: 0.4rem;
+            }
+
+        }
+        @media screen and (max-width:800px){
+            width:80px;
+            height: 80px;
+        }
+        @media screen and (max-width:640px){
+            width:67px;
+            height: 67px;
+        }
+        @media screen and (max-width:520px){
+            width:  53px;
+            height: 53px;
+        }
+    }
+    .lastMonth{
+        background-color:white;
+    }
+    .today{
+        background-color: aquamarine;
+    }
+    .event{
+        color: rgb(62, 78, 156);
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        font-size: 0.9rem;
+        word-break: break-word;
+        @media screen and (max-width:800px){
+            font-size: 0.7rem;
+        }
+        @media screen and (max-width:640px){
+            font-size: 0.3rem;
+        }
+        @media screen and (max-width:520px){
+            font-size: 0.3rem
+        }
+    }
+    .sunday{
+        background-color: rgb(255, 211, 211);
+    }
+    .passed{
+        background-color: rgb(185, 185, 185);
+        &.sunday{
+            background-color: rgb(188, 138, 138);
+        }
+    }
+    
+    
+
+}
+
+#modal-background{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 1;
+    #modal-container{
+        width: 300px;
+        height: 120px;
+        margin: 150px auto;
+        background-color: #eee;
+        border-radius: 1rem;
+        padding:1rem;
+        #event-title{
+            word-break: break-all;
+            margin: 0;
+        }
+        #event-input{
+            margin-top: 1rem;
+            width: 255px;
+            border: none;
+            outline: none;
+            border-bottom: 2px #555 solid;
+            font-size: 1rem;
+            height: 1.8rem;
+            border-top-left-radius: 0.2rem;
+            border-top-right-radius: 0.2rem;
+        }
+        #button-container{
+            display: flex;
+            margin-top: 1rem;
+            .modal-button{
+                font-size: 1rem;
+                padding:0.5rem 1rem;
+                border-radius: 0.2rem;
+                border: 0;
+                background-color:rgb(104, 226, 185);
+                color: white;
+                margin-right: 0.5rem;
+            }
+
+            #btn-cancel{
+                background-color:rgb(141, 179, 221);
+            }
+            #btn-delete{
+                background-color:rgb(233, 161, 161);
+            }
+        }
+    }
+}
+
