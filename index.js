@@ -100,7 +100,6 @@ const loadPage=()=>{
 }
 
 const openModal = (date)=>{
-    console.log(event.target)
     eventDate=date
     modal.style.display="block"
     const eventForDay = events.find(e=>e.date ===eventDate)
@@ -108,7 +107,6 @@ const openModal = (date)=>{
         eventTitle.innerText=  eventForDay.title
         btnAdd.style.display="none"
     }else{
-        console.log("no events")
         btnUpdate.style.display="none"
         btnDelete.style.display="none"
     }
@@ -155,25 +153,19 @@ const updateEvent =()=>{
 loadPage()
 
 function reportWindowSize() {
-  //console.log(window.innerHeight);
-  //console.log(window.innerWidth)
   if (window.innerWidth>800 && eventLength!==30){
-    console.log(window.innerWidth)
     eventLength=30
     loadPage()
   }
   if (window.innerWidth<800 && eventLength!==20){
-    console.log(window.innerWidth)
     eventLength=20
     loadPage()
   }
   if (window.innerWidth<640 && eventLength!==15){
-    console.log(window.innerWidth)
     eventLength=15
     loadPage()
   }
   if (window.innerWidth<520 && eventLength!==8){
-    console.log(window.innerWidth)
     eventLength=8
     loadPage()
   }
